@@ -1,16 +1,20 @@
 {
-    "compilerOptions": {
-        "target": "ES2022",
-        "module": "CommonJS",
-        "moduleResolution": "Node",
-        "strict": true,
-        "noImplicitAny": true,
-        "declaration": false,
-        "skipLibCheck": true,
-        "strictNullChecks": true,
-        "resolveJsonModule": true,
-        "outDir": "dist"
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "dist"]
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",          // <-- Change to NodeNext or ESNext for ESM support
+    "moduleResolution": "NodeNext", // <-- Also update module resolution
+    "strict": true,
+    "noImplicitAny": true,
+    "declaration": false,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "esModuleInterop": true,     // <-- Helpful for compatibility with CommonJS modules
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

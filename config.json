@@ -1,5 +1,5 @@
 {
     "permint": "805694528",
     "invlink": "https://discord.com/oauth2/authorize?client_id=546702842866565141&permissions=805694528&integration_type=0&scope=applications.commands+bot",
-    "defaultCooldownDuration": 3
+    "defaultCooldownDuration": 5
 }

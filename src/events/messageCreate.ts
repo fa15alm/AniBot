@@ -10,7 +10,8 @@ export default {
             return;
         }
         if(message.channel.type === ChannelType.GuildText) {
-            message.reply('hi!');
+            //message.reply('hi!');
+            return;
         }
     },
 };

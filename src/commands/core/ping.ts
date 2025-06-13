@@ -1,7 +1,7 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, AutocompleteInteraction } from 'discord.js';
 import { Command } from '../../types/Command';
 
-const command: Command = {
+export default {
     type: 'core',
     usage: 'ping',
     access: 'Members',
@@ -10,8 +10,6 @@ const command: Command = {
         .setDescription('pings the bot'),
 
     async execute(interaction: ChatInputCommandInteraction) {
-        interaction.reply('Pong!');
+        await interaction.reply('Pong!');
     },
 };
-
-export default command;

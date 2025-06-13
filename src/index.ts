@@ -27,7 +27,9 @@ client.cooldowns = new Collection();
 //     console.log('Ready!');
 // });
 
-commandHandler(client);
-eventHandler(client);
+(async () => {
+    await commandHandler(client);
+    await eventHandler(client);
 
-client.login(process.env.TOKEN);
+    client.login(process.env.TOKEN);
+})();
