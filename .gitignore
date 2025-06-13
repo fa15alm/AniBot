@@ -2,3 +2,5 @@ node_modules/
 dist/
 .env
 deploy-commands.js
+.vscode
+boilerplate.js
