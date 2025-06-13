@@ -38,6 +38,13 @@ module.exports = {
             console.error(`No command matching ${interaction.commandName} was found.`);
             return;
         }
+        if(command.type==='dev'){
+            if (!config.devs.includes(interaction.user.id)) {
+                return await interaction.reply({ content: `You do not have permission to use this command.`, flags: [ MessageFlags.Ephemeral ] })
+            }
+            await command.execute(interaction);
+            return;
+        }
 
         // Setup cooldowns collection if not exists
         if (!client.cooldowns.has(command.data.name)) {
