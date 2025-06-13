@@ -1,7 +1,8 @@
 import 'dotenv/config';
-import { Client, Events, GatewayIntentBits, Partials } from 'discord.js';
+import { Events, GatewayIntentBits, Partials, Collection } from 'discord.js';
+import { ExtendedClient } from './structures/ExtendedClient';
 
-const client = new Client({
+const client = new ExtendedClient({
     intents: [
         GatewayIntentBits.Guilds,
         GatewayIntentBits.MessageContent,
@@ -16,8 +17,14 @@ const client = new Client({
 });
 
 
+//client.cooldowns = new Collection();
+//['command', 'event'].forEach(x => require(`./handlers/${x}`)(client));
+
 client.once(Events.ClientReady, (client) => {
     console.log('Ready!');
 });
+
+// commandHandler(client);
+// eventHandler(client);
 
 client.login(process.env.TOKEN);
