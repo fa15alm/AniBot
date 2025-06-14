@@ -6,3 +6,4 @@ deploy-commands.js
 boilerplate.js
 _useful/
 data/
+/src/generated/prisma
